@@ -1,0 +1,35 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<!-- Copyright (c) 2012 Rally Software Development Corp. All rights reserved -->
+<html>
+<head>
+  <title>Utilization Chart</title>
+  <meta name="Name" content="App: Utilization Chart" />
+  <meta name="Version" content="2012.11.21" />
+  <meta name="Vendor" content="Rally Software" />
+
+  <script type="text/javascript" src="/apps/1.32/sdk.js"></script>
+
+  <script type="text/javascript">
+    function onLoad() {
+      var appCustom = new UtilizationChart();
+      appCustom.display(dojo.body());
+    }
+
+    rally.addOnLoad(onLoad);
+  </script>
+</head>
+
+<body>
+  <div style="clear: both;"></div>
+  <div class="body_div">
+      <div id="average_div"></div>
+      <div id="chart_div">
+          <div>
+              <img alt="Progress" src="/slm/images/icon_spinner.gif"/>
+              <em>loading chart...</em>
+          </div>
+      </div>
+      <div id="scoping_msg"></div>
+  </div>
+</body>
+</html>
